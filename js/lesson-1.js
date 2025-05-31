@@ -93,7 +93,7 @@ const hours = Math.floor(totalMinutes / 60);
 const minutes = totalMinutes % 60;
 const editedMinutes = String(minutes).padStart(2, "0");
 const editedHours = String(hours).padStart(2, "0");
-alert(editedHours + " год." + " : " + editedMinutes + " хв.");
+alert(`${editedHours} год.  :  ${editedMinutes} хв.`);
 
 //!_______________________________________________________________________
 
