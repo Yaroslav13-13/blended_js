@@ -91,9 +91,9 @@ let totalMinutes = prompt("Введіть к-ть хвилин");
 totalMinutes = +totalMinutes;
 const hours = Math.floor(totalMinutes / 60);
 const minutes = totalMinutes % 60;
-const editedMinutes = String(1).padStart(2, "0");
-const editedHours = String(1).padStart(2, "0");
-const totalHours = console.log(hours + ":" + minutes);
+const editedMinutes = String(minutes).padStart(2, "0");
+const editedHours = String(hours).padStart(2, "0");
+alert(editedHours + " год." + " : " + editedMinutes + " хв.");
 
 //!_______________________________________________________________________
 
