@@ -80,6 +80,23 @@
 //* console.log(result);
 //!_______________________________________________________________________
 
+//!     Завдання 4:
+//?     Отримуйте від користувача число (кількість хвилин) через prompt
+//?     і виводьте у консоль рядок у форматі годин та хвилин.
+//?     Приклад: користувач вводить в prompt '70' -> в консолі відобразиться '01:10'.
+//?     Корисне посилання для відображення годин та хвилин у потрібному форматі ('01' замість '1'):
+//?     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart#examples
+
+let totalMinutes = prompt("Введіть к-ть хвилин");
+totalMinutes = +totalMinutes;
+const hours = Math.floor(totalMinutes / 60);
+const minutes = totalMinutes % 60;
+const editedMinutes = String(1).padStart(2, "0");
+const editedHours = String(1).padStart(2, "0");
+const totalHours = console.log(hours + ":" + minutes);
+
+//!_______________________________________________________________________
+
 //!     Завдання 5:
 //?     Напишіть код, який запитуватиме у користувача
 //?     логін за допомогою prompt і виводить результат в консоль браузера
@@ -138,19 +155,12 @@
 //?      Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
 //?      повертати з функції рядок - 'Not a number!'.
 
-function min(a, b) {
-  if (typeof a === "number" && typeof b === "number") {
-      }
-  else{
-    return "Not a number!";
-  }
-  if (a === Number && b === Number) {
-    return minNumber;
-  }
-  return minNumber;
-  }
-}
-console.log(min(4, 8));
+//*      function min(a, b) {
+//*        if (typeof a === "number" && typeof b === "number") {
+//*          return a < b ? a : b;
+//*        } else return "Not a number!";
+//*      }
+//*      console.log(min("4", 8));
 
 //!_______________________________________________________________________
 
@@ -160,14 +170,14 @@ console.log(min(4, 8));
 //?     В іншому випадку вона запитує підтвердження через confirm
 //?     і повертає його результат (true/false).
 
-function isAdult(age) {
-  //*   if (age >= 18) {
-  //*     return true;
-  //*   }
-  //*   const answer = confirm("Are you adult?");
-  //*   return answer;
-  //?   return age >= 18 || confirm("Are you adult?");
-  //TODO   return age >= 18 ? true : confirm("Are you adult?");
-}
+//* function isAdult(age) {
+//*   if (age >= 18) {
+//*     return true;
+//*   }
+//*   const answer = confirm("Are you adult?");
+//*   return answer;
+//?   return age >= 18 || confirm("Are you adult?");
+//TODO   return age >= 18 ? true : confirm("Are you adult?");
+//* }
 //* console.log(isAdult(13));
 //!_______________________________________________________________________
