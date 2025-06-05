@@ -60,36 +60,44 @@
 //?    аргументів і повертає їхнє середнє значення.
 //?    Додайте перевірку, що аргументи - це числа.
 
-function caclculateAverage() {
-  let sum = 0;
-  let counter = 0;
-
-  for (const arg of arguments) {
-    if (typeof arg === "number") {
-      sum += arg;
-      console.log(sum);
-      counter++;
-    }
-    if (counter === 0) {
-      return 0;
-    }
-  }
-  return sum / counter;
-}
-
-console.log(caclculateAverage(1, 2, 2, 2, " ", true, false, null, 41, 9));
+//* function caclculateAverage() {
+//*   let sum = 0;
+//*   let counter = 0;
+//*   for (const arg of arguments) {
+//*     if (typeof arg === "number") {
+//*       sum += arg;
+//*       console.log(sum);
+//*       counter++;
+//*     }
+//*     if (counter === 0) {
+//*       return 0;
+//*     }
+//*   }
+//*   return sum / counter;
+//* }
+//* console.log(caclculateAverage(1, 2, 2, 2, " ", true, false, null, 41, 9));
 
 //!_______________________________________________________________________
 
 //!      Завдання 4:
-// Напишіть функцію, яка сумуватиме сусідні числа
-// і пушитиме їх в новий масив.
+//? Напишіть функцію, яка сумуватиме сусідні числа
+//? і пушитиме їх в новий масив.
 
-// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+//? const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
 
-// уточнення: складати необхідно перше число з другим, потім друге - з третім,
-// третє - з четвертим і так до кінця.
-// В результаті функція має повертати масив [33, 45, 39, 17, 25, 27, 29].
+//? уточнення: складати необхідно перше число з другим, потім друге - з третім,
+//? третє - з четвертим і так до кінця.
+//? В результаті функція має повертати масив [33, 45, 39, 17, 25, 27, 29].
+
+//*   function addingNumbers(arrey) {
+//*     const newArr = [];
+//*     for (let i = 0; i < arrey.length - 1; i++) {
+//*       newArr.push(arrey[i] + arrey[i + 1]);
+//*     }
+//*     return newArr;
+//*   }
+//*   console.log(addingNumbers([22, 11, 34, 5, 12, 13, 14, 15]));
+
 //!_______________________________________________________________________
 
 //!      Завдання 5:
@@ -112,32 +120,60 @@ console.log(caclculateAverage(1, 2, 2, 2, " ", true, false, null, 41, 9));
 //!_______________________________________________________________________
 
 //!      Завдання 7:
-// Напишіть скрипт, який для об'єкту user, послідовно:
-// 1 - додасть поле mood зі значенням 'happy',
-// 2 - замінить hobby на 'skydiving',
-// 3 - замінить значення premium на false,
-// 4 - виведе зміст об'єкта user у форматі
-// '<ключ>:<значення>' використовуя Object.keys() та for...of
+//?    Напишіть скрипт, який для об'єкту user, послідовно:
+//?    1 - додасть поле mood зі значенням 'happy',
+//?    2 - замінить hobby на 'skydiving',
+//?    3 - замінить значення premium на false,
+//?    4 - виведе зміст об'єкта user у форматі
+//?    '<ключ>:<значення>' використовуя Object.keys() та for...of
 
-// const user = {
-//     name: "John",
-//     age: 20,
-//     hobby: "tenis",
-//     premium: true,
-//   };
+//* const user = {
+//*   name: "John",
+//*   age: 20,
+//*   hobby: "tenis",
+//*   premium: true,
+//* };
+
+//* user.mood = "happy";
+//* user.hobby = "skydiving";
+//* user.premium = false;
+
+//TODO   Вирішення 1:
+
+//* const userKeys = Object.keys(user);
+//* console.log(userKeys);
+//* for (const key of userKeys) {
+//*   console.log(`${key} : ${user[key]}`);
+//* }
+
+//TODO   Вирішення 2:
+
+//* const userArrs = Object.entries(user);
+//* for (const arr of userArrs) {
+//*   console.log(`${arr[0]} : ${arr[1]}`);
+//* }
+
 //!_______________________________________________________________________
 
 //!      Завдання 8:
-// Є об'єкт, в якому зберігаються зарплати команди
-// Напишіть код для додавання усіх зарплат та
-// збережіть його результат в змінній sum.
-// Якщо об'єкт salaries пустий, то результат має бути 0
+//?   Є об'єкт, в якому зберігаються зарплати команди
+//?   Напишіть код для додавання усіх зарплат та
+//?   збережіть його результат в змінній sum.
+//?   Якщо об'єкт salaries пустий, то результат має бути 0
 
-// const salaries = {
-//     Mango: 100,
-//     Poly: 160,
-//     Ajax: 1470,
-//   };
+//*   const salaries = {
+//*     Mango: 100,
+//*     Poly: 160,
+//*     Ajax: 1470,
+//*   };
+
+//*   const values = Object.values(salaries);
+//*   let sum = 0;
+//*   for (const value of values) {
+//*     sum += value;
+//*     console.log(sum);
+//*   }
+
 //!_______________________________________________________________________
 
 //!      Завдання 9:
@@ -149,6 +185,34 @@ console.log(caclculateAverage(1, 2, 2, 2, " ", true, false, null, 41, 9));
 
 // Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
 // методи sum і mult мають повертати рядок 'No such propeties'
+
+// const calculator = {
+//   read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   },
+
+//   exist() {
+//     return this.hasOwnProperty("a") && this.hasOwnProperty("b");
+//   },
+
+//   sum() {
+//     if (this.exist()) {
+//       return this.a + this.b;
+//     } else {
+//       return "No such properties";
+//     }
+//   },
+
+//   mult() {
+//     if (this.exist()) {
+//       return this.a * this.b;
+//     } else {
+//       return "No such properties";
+//     }
+//   },
+// };
+
 //!_______________________________________________________________________
 
 //!      Завдання 10:
