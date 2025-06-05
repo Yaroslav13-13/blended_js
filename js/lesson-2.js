@@ -34,32 +34,51 @@
 //!_______________________________________________________________________
 
 //!      Завдання 2:
-//? Напишіть функцію checkLogin(array), яка:
-//? Приймає масив логінів як аргумент.
-//? Запитує ім'я користувача через prompt.
-//? Перевіряє, чи є введене ім'я у переданому масиві.
-//? Якщо ім'я є в масиві – виводить повідомлення через alert: "Welcome, <name>!"
-//? Якщо ім'я відсутнє – виводить повідомлення: "User not found".
+//?    Напишіть функцію checkLogin(array), яка:
+//?    Приймає масив логінів як аргумент.
+//?    Запитує ім'я користувача через prompt.
+//?    Перевіряє, чи є введене ім'я у переданому масиві.
+//?    Якщо ім'я є в масиві – виводить повідомлення через alert: "Welcome, <name>!"
+//?    Якщо ім'я відсутнє – виводить повідомлення: "User not found".
+//?    const logins = ["Peter", "John", "Igor", "Sasha"];
 
-const logins = ["Peter", "John", "Igor", "Sasha"];
-
-function checkLogin(array) {
-  const name = prompt("Введіть ваше ім'я");
-  if (array.includes(name)) {
-    alert(`Welcome, ${name}!`);
-  } else {
-    alert("User not found");
-  }
-}
-checkLogin(logins);
+//*   function checkLogin(array) {
+//*     const name = prompt("Введіть ваше ім'я");
+//*     if (array.includes(name)) {
+//*       alert(`Welcome, ${name}!`);
+//*     } else {
+//*       alert("User not found");
+//*     }
+//*   }
+//*   checkLogin(logins);
 
 //!_______________________________________________________________________
 
 //!      Завдання 3:
-// Напишіть функцію caclculateAverage(),
-// яка приймає довільну кількість
-// аргументів і повертає їхнє середнє значення.
-// Додайте перевірку, що аргументи - це числа.
+//?    Напишіть функцію caclculateAverage(),
+//?    яка приймає довільну кількість
+//?    аргументів і повертає їхнє середнє значення.
+//?    Додайте перевірку, що аргументи - це числа.
+
+function caclculateAverage() {
+  let sum = 0;
+  let counter = 0;
+
+  for (const arg of arguments) {
+    if (typeof arg === "number") {
+      sum += arg;
+      console.log(sum);
+      counter++;
+    }
+    if (counter === 0) {
+      return 0;
+    }
+  }
+  return sum / counter;
+}
+
+console.log(caclculateAverage(1, 2, 2, 2, " ", true, false, null, 41, 9));
+
 //!_______________________________________________________________________
 
 //!      Завдання 4:
