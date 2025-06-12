@@ -108,6 +108,14 @@
 // в іншому випадку - поверніть 'Sory, it is not an array!'.
 
 // const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
+
+function getLength(array) {
+    let words = array.join("-");
+    return words;
+}
+
+console.log(getLength(["380", "67", "123", "45", "67"]));
+
 //!_______________________________________________________________________
 
 //!      Завдання 6:
