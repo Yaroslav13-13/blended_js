@@ -101,20 +101,28 @@
 //!_______________________________________________________________________
 
 //!      Завдання 5:
-// Напишіть функцію findSmallestNumber(numbers),
-// яка шукає найменше число в масиві.
-// Додайте перевірку, що функція отримує саме масив, і
-// якщо функція отримує масив - поверніть з функції найменше число,
-// в іншому випадку - поверніть 'Sory, it is not an array!'.
+//? Напишіть функцію findSmallestNumber(numbers),
+//? яка шукає найменше число в масиві.
+//? Додайте перевірку, що функція отримує саме масив, і
+//? якщо функція отримує масив - поверніть з функції найменше число,
+//? в іншому випадку - поверніть 'Sory, it is not an array!'.
+//? const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 
-// const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
-
-function getLength(array) {
-    let words = array.join("-");
-    return words;
-}
-
-console.log(getLength(["380", "67", "123", "45", "67"]));
+//* function findSmallestNumber(numbers) {
+  *  
+//*         if(!Array.isArray(numbers)){
+//*            return 'Sory, it is not an array!'
+//*         }
+//*         let smallest = numbers[0];
+//* for(let i = 1; i<numbers.lengthc;i++){
+//*     if(numbers[i]<smallest){
+//*         smallest = numbers[i];
+//*     }
+//* }
+//* return smallest;
+//* }
+//* console.log(findSmallestNumber([5, 35, 56, 12, 24, 7, 80, 3]));
+//* console.log(findSmallestNumber("hello"));
 
 //!_______________________________________________________________________
 
@@ -124,6 +132,11 @@ console.log(getLength(["380", "67", "123", "45", "67"]));
 // пробілами (параметр string), і повертатиме найдовше слово у реченні.
 
 // Скористайтесь цим прикладом виклику функції для перевірки її роботи:
+// console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
+
+// function findLongestWord(string){
+
+// }
 // console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
 //!_______________________________________________________________________
 
@@ -240,4 +253,4 @@ console.log(getLength(["380", "67", "123", "45", "67"]));
 //     { name: "Виноград", price: 440, quantity: 3 },
 //     { name: "Банан", price: 125, quantity: 3 },
 //   ];
-//!_______________________________________________________________________
+//!______________________________________________________________________
