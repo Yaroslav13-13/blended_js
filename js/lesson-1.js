@@ -1,9 +1,3 @@
-// const value = prompt("Enter something");
-// console.log(value);
-// alert("Hello");
-// const value = confirm("Hello");
-// console.log(value);
-
 //!     Завдання 1:
 //?     Запропонуйте користувачу ввести число за допомогою prompt().
 //?     Збережіть введене значення у змінну number.

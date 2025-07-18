@@ -109,7 +109,7 @@
 //? const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 
 //* function findSmallestNumber(numbers) {
-  *  
+
 //*         if(!Array.isArray(numbers)){
 //*            return 'Sory, it is not an array!'
 //*         }
@@ -127,17 +127,24 @@
 //!_______________________________________________________________________
 
 //!      Завдання 6:
-// Напишіть функцію findLongestWord(string), яка
-// приймає довільний рядок, що складається лише зі слів, розділених
-// пробілами (параметр string), і повертатиме найдовше слово у реченні.
+//? Напишіть функцію findLongestWord(string), яка
+//? приймає довільний рядок, що складається лише зі слів, розділених
+//? пробілами (параметр string), і повертатиме найдовше слово у реченні.
 
-// Скористайтесь цим прикладом виклику функції для перевірки її роботи:
-// console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
+//? Скористайтесь цим прикладом виклику функції для перевірки її роботи:
+//? console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
 
-// function findLongestWord(string){
-
-// }
-// console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
+//* function findLongestWord(string) {
+//*   const words = string.split(" ");
+//*   let longestWord = "";
+//*   for (const word of words) {
+//*     if (words.length > longestWord.length) {
+//*       longestWord = word;
+//*     }
+//*   }
+//*   return longestWord;
+//* }
+//* console.log(findLongestWord("London is the capital of Great Britain")); // 'capital'
 //!_______________________________________________________________________
 
 //!      Завдання 7:
@@ -198,41 +205,41 @@
 //!_______________________________________________________________________
 
 //!      Завдання 9:
-// Створіть об'єкт calculator з наступними методами:
-// read(a, b) - приймає два аргумента і зберігає їх як властивості об'єкта,
-// sum() - повертає сумму збереженних значень (з перевіркою на наявність властивостей в об'єкті),
-// mult() - перемножає збереженні значення і повертає результат (з перевіркою на наявність властивостей в об'єкті),
-// винесіть перевірку на наявність властивостей в об'єкті в окремий метод exist().
+//? Створіть об'єкт calculator з наступними методами:
+//? read(a, b) - приймає два аргумента і зберігає їх як властивості об'єкта,
+//? sum() - повертає сумму збереженних значень (з перевіркою на наявність властивостей в об'єкті),
+//? mult() - перемножає збереженні значення і повертає результат (з перевіркою на наявність властивостей в об'єкті),
+//? винесіть перевірку на наявність властивостей в об'єкті в окремий метод exist().
+//? Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
+//? методи sum і mult мають повертати рядок 'No such propeties'
 
-// Якщо вказані властивості в обʼєкті відсутні (тобто метод exist повертає false),
-// методи sum і mult мають повертати рядок 'No such propeties'
-
-// const calculator = {
-//   read(a, b) {
-//     this.a = a;
-//     this.b = b;
-//   },
-
-//   exist() {
-//     return this.hasOwnProperty("a") && this.hasOwnProperty("b");
-//   },
-
-//   sum() {
-//     if (this.exist()) {
-//       return this.a + this.b;
-//     } else {
-//       return "No such properties";
-//     }
-//   },
-
-//   mult() {
-//     if (this.exist()) {
-//       return this.a * this.b;
-//     } else {
-//       return "No such properties";
-//     }
-//   },
-// };
+//* const calculator = {
+//*   read(a, b) {
+//*     this.a = a;
+//*     this.b = b;
+//*   },
+//*   exist() {
+//*     return this.hasOwnProperty("a") && this.hasOwnProperty("b");
+//*   },
+//*   sum() {
+//*     if (this.exist()) {
+//*       return this.a + this.b;
+//*     } else {
+//*       return "No such properties";
+//*     }
+//*   },
+//*   mult() {
+//*     if (this.exist()) {
+//*       return this.a * this.b;
+//*     } else {
+//*       return "No such properties";
+//*     }
+//*   },
+//* };
+//* calculator.read(10, 5);
+//* console.log(calculator.exist());
+//* console.log(calculator.sum());
+//* console.log(calculator.mult());
 
 //!_______________________________________________________________________
 
