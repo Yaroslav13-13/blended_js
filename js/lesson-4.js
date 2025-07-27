@@ -45,8 +45,8 @@ titleH3.forEach((el) => {
 // console.log(navItemm);
 
 //! 11 - додай для знайденого елемента data-topic="navigation" атрибут style і зроби його backgroundColor жовтим
-const navItemm = document.querySelector('li[data-topic="navigation"]');
-navItemm;
+const navItem = document.querySelector('li[data-topic="navigation"]');
+navItem.setAttribute("style", "background-color:yellow");
 //! 12 - у елемента data-topic="navigation" знайди елемент р і зміни його текст на "Я змінив тут текст!".
 //! 13 - створи const currentTopic = "manipulation"; після цього знайди елемент у якогоо атрибут data-topic має значення, яке зберігається у змінній currentTopic і виведи його в консоль;
 //! 14 - додай до знайденого елемента атрибут style і зроби його backgroundColor блакитним;
