@@ -30,10 +30,23 @@
 //! 9 - для кожного елмента h3 додай class="active", який змінить колір заголовка на червоний колір
 const titleH3 = document.querySelectorAll("h3");
 titleH3.forEach((el) => {
-  console.log(el.textContent);
+  el.classList.add("active");
+  el.style.color = "red";
 });
 //! 10 - знайти елемент li який має атрибут data-topic з значенням "navigation" і виведи його в консоль;
+// const navItem = document.querySelectorAll("li[data-topic]");
+// navItem.forEach((el) => {
+//   if (el.getAttribute("data-topic") === "navigation") {
+//     console.log(el);
+//   }
+// });
+
+// const navItemm = document.querySelector('li[data-topic="navigation"]');
+// console.log(navItemm);
+
 //! 11 - додай для знайденого елемента data-topic="navigation" атрибут style і зроби його backgroundColor жовтим
+const navItemm = document.querySelector('li[data-topic="navigation"]');
+navItemm;
 //! 12 - у елемента data-topic="navigation" знайди елемент р і зміни його текст на "Я змінив тут текст!".
 //! 13 - створи const currentTopic = "manipulation"; після цього знайди елемент у якогоо атрибут data-topic має значення, яке зберігається у змінній currentTopic і виведи його в консоль;
 //! 14 - додай до знайденого елемента атрибут style і зроби його backgroundColor блакитним;
