@@ -63,15 +63,24 @@ paragraph.textContent = "Я змінив тут текст!";
 //! 13 - створи const currentTopic = "manipulation"; після цього знайди елемент у якогоо атрибут data-topic має значення, яке зберігається у змінній currentTopic і виведи його в консоль;
 const currentTopic = "manipulation";
 const topic = document.querySelector(`li[data-topic="${currentTopic}"]`);
-console.log(topic);
+// console.log(topic);
 
 //! 14 - додай до знайденого елемента атрибут style і зроби його backgroundColor блакитним;
 topic.setAttribute("style", "background-color:lightblue");
 
 //! 15 - знайти в документі заголовок, який має class="completed" і виведи його в консоль;
+const titleCompleted = document.querySelector(".completed");
+// console.log(titleCompleted.textContent);
 
 //! 16 - видали елемент li в якому знаходиться заголовок, який має class="completed"
+titleCompleted.parentElement.remove("li");
+
 //! 17 - після заголовка h1 (перед списком) додай новий елемент p і задай йому наступний текст: "Об'єктна модель документа (Document Object Model)"
+const titleH1 = document.querySelector("h1");
+const newParagraph = document.createElement("p");
+newParagraph.textContent = "Об'єктна модель документа (Document Object Model)";
+titleH1.insertAdjacentElement("beforeend", newParagraph);
+
 //! 18 - додай новий елемент списку у кінець списка, його заголовок це - "Властивість innerHTML" а опис (р) - "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу". тобто, потрібно створити елемент LI потім наповнити H3 та P і готову LI закинути у кінець списку
 //! 19 - зроби це саме, але використовуй шаблонні рядки та метод insertAdjacentHTML()
 //! 20 - очисти список
