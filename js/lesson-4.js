@@ -79,8 +79,32 @@ titleCompleted.parentElement.remove("li");
 const titleH1 = document.querySelector("h1");
 const newParagraph = document.createElement("p");
 newParagraph.textContent = "Об'єктна модель документа (Document Object Model)";
-titleH1.insertAdjacentElement("beforeend", newParagraph);
+titleH1.insertAdjacentElement("afterend", newParagraph);
 
-//! 18 - додай новий елемент списку у кінець списка, його заголовок це - "Властивість innerHTML" а опис (р) - "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу". тобто, потрібно створити елемент LI потім наповнити H3 та P і готову LI закинути у кінець списку
+//! 18 - додай новий елемент списку у кінець списка, його заголовок це - "Властивість innerHTML"
+//!   а опис (р) - "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це
+//! використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу".
+//! тобто, потрібно створити елемент LI потім наповнити H3 та P і готову LI закинути у кінець списку
+// const list = document.querySelector(".list");
+
+// list.innerHTML += ` <li>
+//           <h3>Властивість innerHTML</h3>
+//           <p>
+//             Ще один спосіб створити DOM-елементи і помістити їх в дерево - це
+// використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу
+//           </p>
+//         </li>`;
+
 //! 19 - зроби це саме, але використовуй шаблонні рядки та метод insertAdjacentHTML()
+const list = document.querySelector(".list");
+
+const newItem = ` <li>
+          <h3>Властивість innerHTML</h3>
+          <p>
+            Ще один спосіб створити DOM-елементи і помістити їх в дерево - це
+використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу
+          </p>
+        </li>`;
+list.insertAdjacentHTML("beforeend", newItem);
 //! 20 - очисти список
+// list.remove();
